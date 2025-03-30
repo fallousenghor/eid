@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="eid.css">
+    <title>Joyeux Eid</title>
+   
+</head>
+<body>
+    <div class="container">
+        <div class="message" id="clickMessage">Cliquez sur la lune, il y a une surprise !</div>
+        <div class="moon" id="moon" onclick="showEidMessage()"></div>
+        <div class="mosque" id="mosque"></div>
+        <div class="eid-message" id="eidMessage">🌙 Eid Mubarak à toi ! 🌙</div>
+        <div class="dua" id="duaMessage">Taqabbal Allah minna wa minkum, wa 'id mubarak ! 🤲</div>
+        <div class="chicken" id="chickenMessage">🐔 Un poulet pour le festin ! 🍗</div>
+    </div>
+
+    <script>
+        function showEidMessage() {
+            document.getElementById("clickMessage").style.display = "none";
+            document.getElementById("moon").style.display = "none";
+            document.getElementById("mosque").style.display = "block";
+            document.getElementById("eidMessage").style.display = "block";
+            setTimeout(() => {
+                document.getElementById("duaMessage").style.display = "block";
+            }, 500); 
+            setTimeout(() => {
+                document.getElementById("chickenMessage").style.display = "block";
+            }, 1000); 
+        }
+    </script>
+</body>
+</html>
